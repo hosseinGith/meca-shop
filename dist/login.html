@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link href="styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/flip.min.css" />
+    <title>ورود / عضویت</title>
+</head>
+
+<body class="select-none">
+
+
+    
+    <!-- main -->
+    <main class="px-3">
+        
+        <!-- login  -->
+        <form id="loginModal"
+            class="bg-white m-auto max-w-472 my-20 shadow-sm border rounded-lg">
+            <div class="flex items-center justify-center py-4 px-8 border-b">
+                <p class="font-medium text-lg">ورود و عضویت</p>
+            </div>
+            <div class="p-6 text-center">
+                <img src="img/logo (2).png" class="block mx-auto mt-20 w-60">
+                <!--  -->
+                <div class="mb-8" id="mobileNumber">
+                    <p class="my-4">لطفا شماره موبایل خود را وارد نمایید</p>
+                    <div class="relative mb-1">
+                        <label class="text-xs bg-white absolute right-3 -top-2 z-20 px-3">شماره موبایل</label>
+                        <input type="tel" class="rounded-lg text-right outline-none border-2 w-full px-3 py-4 text-sm"
+                            placeholder="مثلا ۰۹۱۲۱۲۴۲۵۵۲">
+                    </div>
+                    <p class="text-danger text-xs text-right mb-4">شماره موبایل باید 11 رقمی باشد و به درستی وارد شود</p>
+                    <a href="otp.html" id="showOtp"
+                        class="font-bold text-sm cursor-pointer transition-all hover:bg-info2 rounded-lg bg-info p-3 mb-6 text-white w-full md:mr-auto block">
+                        تایید و ادامه
+                    </a>
+                    <p class="text-sm pt-6 border-t">
+                        ورود و عضویت شما به منزله پذیرفتن <a class="cursor-pointer text-info">قوانین و مقررات</a><br>
+                        کوک موبایل می‌باشد.
+                    </p>
+                </div>
+            </div>
+        </form>
+        
+    </main>
+
+</body>
+
+</html>
+
+<!-- npx tailwindcss -i styles.css -o ./dist/styles.css --watch -->
