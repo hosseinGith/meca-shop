@@ -10,6 +10,7 @@ checkboxRow.forEach((item) => {
 });
 // اسلایدر
 var banner1 = new Swiper(".banner1", {
+  dir: "ltr",
   slidesPerView: 1,
   loop: true,
   spaceBetween: 14,
@@ -23,6 +24,7 @@ var banner1 = new Swiper(".banner1", {
   },
 });
 var banner2 = new Swiper(".banner2", {
+  dir: "ltr",
   slidesPerView: 1,
   loop: true,
   spaceBetween: 14,
@@ -36,6 +38,7 @@ var banner2 = new Swiper(".banner2", {
   },
 });
 var banner3 = new Swiper(".banner3", {
+  dir: "ltr",
   slidesPerView: 1,
   loop: true,
   spaceBetween: 14,
@@ -49,6 +52,7 @@ var banner3 = new Swiper(".banner3", {
   },
 });
 var janebi = new Swiper(".janebi", {
+  dir: "ltr",
   slidesPerView: 1,
   loop: true,
   autoplay: {
@@ -62,6 +66,7 @@ var janebi = new Swiper(".janebi", {
   },
 });
 var category = new Swiper(".brands", {
+  dir: "ltr",
   slidesPerView: 2.8,
   loop: true,
   autoplay: {
@@ -86,6 +91,7 @@ var category = new Swiper(".brands", {
   },
 });
 var time = new Swiper(".time", {
+  dir: "ltr",
   slidesPerView: 1.3,
   loop: true,
   autoplay: {
@@ -107,6 +113,7 @@ var time = new Swiper(".time", {
   },
 });
 var mobile = new Swiper(".mobile", {
+  dir: "ltr",
   slidesPerView: 1.3,
   loop: true,
   autoplay: {
@@ -128,6 +135,7 @@ var mobile = new Swiper(".mobile", {
   },
 });
 var mobile2 = new Swiper(".mobile2", {
+  dir: "ltr",
   slidesPerView: 2.4,
   loop: true,
   autoplay: {
@@ -152,6 +160,7 @@ var mobile2 = new Swiper(".mobile2", {
   },
 });
 var mobile = new Swiper(".blog", {
+  dir: "ltr",
   slidesPerView: 1.1,
   loop: true,
   autoplay: {
@@ -176,6 +185,7 @@ var mobile = new Swiper(".blog", {
   },
 });
 var comments = new Swiper(".comments", {
+  dir: "ltr",
   slidesPerView: 1.7,
   loop: true,
   autoplay: {
@@ -200,6 +210,7 @@ var comments = new Swiper(".comments", {
   },
 });
 var swiper = new Swiper(".smallImgs", {
+  dir: "ltr",
   spaceBetween: 10,
   slidesPerView: 4,
   freeMode: true,
@@ -210,6 +221,7 @@ var swiper = new Swiper(".smallImgs", {
   watchSlidesProgress: true,
 });
 var swiper2 = new Swiper(".gallery", {
+  dir: "ltr",
   spaceBetween: 10,
   navigation: {
     nextEl: ".swiper-button-next",
@@ -224,6 +236,7 @@ var swiper2 = new Swiper(".gallery", {
   },
 });
 var brands = new Swiper(".payment", {
+  dir: "ltr",
   slidesPerView: 2.8,
   loop: true,
   autoplay: {
@@ -248,6 +261,7 @@ var brands = new Swiper(".payment", {
   },
 });
 var category2 = new Swiper(".category2", {
+  dir: "ltr",
   slidesPerView: 2,
   loop: true,
   autoplay: {
