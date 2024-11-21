@@ -1534,6 +1534,14 @@ video {
   max-width: 900px;
 }
 
+.max-w-\[400px\] {
+  max-width: 400px;
+}
+
+.max-w-\[330px\] {
+  max-width: 330px;
+}
+
 .flex-shrink-0 {
   flex-shrink: 0;
 }
@@ -3762,6 +3770,11 @@ input[type=range]:focus {
     grid-column: span 8 / span 8;
   }
 
+  .md\:mx-0 {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
   .md\:mb-0 {
     margin-bottom: 0px;
   }
@@ -3814,8 +3827,16 @@ input[type=range]:focus {
     width: auto;
   }
 
+  .md\:w-\[330px\] {
+    width: 330px;
+  }
+
   .md\:max-w-3xl {
     max-width: 48rem;
+  }
+
+  .md\:max-w-\[330px\] {
+    max-width: 330px;
   }
 
   .md\:grid-cols-2 {
@@ -3914,6 +3935,10 @@ input[type=range]:focus {
   .md\:text-black {
     --tw-text-opacity: 1;
     color: rgb(0 0 0 / var(--tw-text-opacity));
+  }
+
+  .md\:opacity-0 {
+    opacity: 0;
   }
 
   .md\:hover\:scale-105:hover {
@@ -4400,6 +4425,10 @@ input[type=range]:focus {
 
   .xl\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .xl\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
