@@ -52,6 +52,10 @@ module.exports = {
         sliedContImageBorderColor: "#1dac77",
         sliedContImagePercentColor: "#f16422",
         sliedContImageHeartColor: "#00bf6f",
+        modalBgColor:"#0000006b",
+        theadDark:"#212529",
+        productColorsPices:"#f16422"
+
       },
       borderWidth: {
         1: "1.5px",

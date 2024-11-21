@@ -9,6 +9,7 @@ checkboxRow.forEach((item) => {
   });
 });
 // اسلایدر
+
 var banner1 = new Swiper(".banner1", {
   dir: "ltr",
   slidesPerView: 1,
@@ -220,21 +221,7 @@ var swiper = new Swiper(".smallImgs", {
   },
   watchSlidesProgress: true,
 });
-var swiper2 = new Swiper(".gallery", {
-  dir: "ltr",
-  spaceBetween: 10,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
-  thumbs: {
-    swiper: swiper,
-  },
-});
+
 var brands = new Swiper(".payment", {
   dir: "ltr",
   slidesPerView: 2.8,
