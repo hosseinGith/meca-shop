@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: IRANSansX-Regular;
-  src: url('../dist/fonts/woff/IRANSansXFaNum-Regular.woff') format("woff");
+  src: url("../dist/fonts/woff/IRANSansXFaNum-Regular.woff") format("woff");
 }
 
 body {
@@ -24,7 +24,7 @@ a {
 header ul li svg path,
 header ul li svg rect,
 .shadow-shadowMenu a path {
-  transition: all .4s;
+  transition: all 0.4s;
 }
 
 header ul li:hover svg path,
@@ -35,17 +35,20 @@ header ul li:hover svg rect,
 
 .tabs.active,
 .catDropdownTab.active {
-  @apply bg-white text-info
+  @apply bg-white text-info;
 }
 
-.catDropdownTab.active svg path, .catDropdownTab.active svg rect, .catDropdownTab:hover svg path, .catDropdownTab:hover svg rect {
-  stroke: #2DB5C2;
+.catDropdownTab.active svg path,
+.catDropdownTab.active svg rect,
+.catDropdownTab:hover svg path,
+.catDropdownTab:hover svg rect {
+  stroke: #2db5c2;
 }
 
 .catDropdown {
   max-height: 0;
   overflow: hidden;
-  transition: all .4s;
+  transition: all 0.4s;
 }
 
 .catDropdown.active {
@@ -59,11 +62,15 @@ header ul li:hover svg rect,
 }
 
 #myTab li.active button {
-  @apply text-info border-info
+  @apply text-info border-info;
 }
 
-#filterModal.active, #selectedFilter.active, #priceModal.active, #categoryModal.active, #cartModal.active {
-  right: 0
+#filterModal.active,
+#selectedFilter.active,
+#priceModal.active,
+#categoryModal.active,
+#cartModal.active {
+  right: 0;
 }
 
 #cartModal.active #addOrder {
@@ -94,11 +101,11 @@ header ul li:hover svg rect,
 }
 
 .swiper-button-next::after {
-  content: 'next' !important;
+  content: "next" !important;
 }
 
 .swiper-button-prev::after {
-  content: 'prev' !important;
+  content: "prev" !important;
 }
 
 .tick {
@@ -181,7 +188,7 @@ input[type="number"]::-webkit-outer-spin-button {
   border: 0;
 }
 
-.range-slider input[type=range]::-moz-focus-outer {
+.range-slider input[type="range"]::-moz-focus-outer {
   border: 0;
 }
 
@@ -218,12 +225,12 @@ input[type="number"]::-webkit-outer-spin-button {
   margin: auto;
 }
 
-input[type=range] {
+input[type="range"] {
   -webkit-appearance: none;
   background: none;
 }
 
-input[type=range]::-webkit-slider-runnable-track {
+input[type="range"]::-webkit-slider-runnable-track {
   height: 5px;
   border: none;
   border-radius: 3px;
@@ -235,21 +242,21 @@ input[type="range"].comment::-moz-range-track {
   background: #eee;
 }
 
-input[type=range]::-ms-track {
+input[type="range"]::-ms-track {
   height: 5px;
   background: transparent;
   border: none;
   border-radius: 3px;
 }
 
-input[type=range]::-moz-range-track {
+input[type="range"]::-moz-range-track {
   height: 5px;
   background: transparent;
   border: none;
   border-radius: 3px;
 }
 
-input[type=range]::-webkit-slider-thumb {
+input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   border: none;
   height: 16px;
@@ -261,7 +268,7 @@ input[type=range]::-webkit-slider-thumb {
   z-index: 10000;
 }
 
-input[type=range]::-ms-thumb {
+input[type="range"]::-ms-thumb {
   -webkit-appearance: none;
   border: none;
   height: 16px;
@@ -273,7 +280,7 @@ input[type=range]::-ms-thumb {
   z-index: 10000;
 }
 
-input[type=range]::-moz-range-thumb {
+input[type="range"]::-moz-range-thumb {
   -webkit-appearance: none;
   border: none;
   height: 13px;
@@ -285,7 +292,7 @@ input[type=range]::-moz-range-thumb {
   z-index: 10000;
 }
 
-input[type=range]:focus {
+input[type="range"]:focus {
   outline: none;
 }
 
@@ -296,7 +303,7 @@ input[type=range]:focus {
   left: 0;
   top: 21px;
   position: absolute;
-  background: #DDD;
+  background: #ddd;
   height: 2px;
 }
 
@@ -309,7 +316,7 @@ input[type=range]:focus {
   opacity: 0;
   z-index: 40;
   visibility: hidden;
-  transition: all .4s;
+  transition: all 0.4s;
 }
 
 #overlay.active {
@@ -327,7 +334,7 @@ input[type=range]:focus {
   opacity: 0;
   z-index: 50;
   visibility: hidden;
-  transition: all .4s;
+  transition: all 0.4s;
 }
 
 #editModal.active,
@@ -353,33 +360,33 @@ input[type=range]:focus {
   top: 0;
 }
 
-.sizeBox>span:last-child,
-.categoryBox>div:nth-child(1),
-.categoryBox>div:nth-child(2),
-.categoryBox>div:nth-child(3),
-.categoryBox>div:nth-child(4),
-.categoryBox>div:nth-child(5),
-.categoryBox>div:last-child {
+.sizeBox > span:last-child,
+.categoryBox > div:nth-child(1),
+.categoryBox > div:nth-child(2),
+.categoryBox > div:nth-child(3),
+.categoryBox > div:nth-child(4),
+.categoryBox > div:nth-child(5),
+.categoryBox > div:last-child {
   display: block;
 }
 
-.sizeBox>span:nth-child(1),
-.sizeBox>span:nth-child(2),
-.sizeBox>span:nth-child(3) {
+.sizeBox > span:nth-child(1),
+.sizeBox > span:nth-child(2),
+.sizeBox > span:nth-child(3) {
   display: flex;
 }
 
-.categoryBox>div,
-.sizeBox>span,
+.categoryBox > div,
+.sizeBox > span,
 .selectSize {
   display: none;
 }
 
-.sizeBox.active>span {
+.sizeBox.active > span {
   display: flex;
 }
 
-.categoryBox.active>div {
+.categoryBox.active > div {
   display: block;
 }
 
@@ -387,7 +394,7 @@ input[type=range]:focus {
   @apply flex;
 }
 
-.selectSize>div.active {
+.selectSize > div.active {
   @apply bg-info3;
 }
 
@@ -396,7 +403,6 @@ input[type=range]:focus {
 }
 
 @media only screen and (max-width: 992px) {
-
   .smallImgs .swiper-slide-thumb-active {
     border: 1px solid #2db5c2 !important;
     background-color: #2db5c2 !important;
@@ -419,32 +425,45 @@ input[type=range]:focus {
 }
 
 .showDropDownAnimation {
-  animation: dropDwon .5s linear;
+  animation: dropDwon 0.5s linear;
 }
 
 .hideDropDownAnimation {
-  animation: hidedropDwon .3s linear;
+  animation: hidedropDwon 0.3s linear;
 }
 
 @keyframes dropDwon {
   from {
-    opacity:0;
+    opacity: 0;
     transform: translate(0, -100%);
   }
 
   to {
-    opacity:1;
+    opacity: 1;
     transform: translate(0, 0%);
   }
 }
+
 @keyframes hidedropDwon {
   from {
-    opacity:1;
+    opacity: 1;
     transform: translate(0, 0%);
   }
 
   to {
-    opacity:0;
+    opacity: 0;
     transform: translate(0, -200%);
   }
+}
+
+.window {
+  background: rgba(0, 0, 0, 0.8);
+  @apply fixed left-0 top-0 h-full w-full hidden items-center justify-center z-[10000];
+}
+.window.active {
+  @apply flex;
+}
+.storySlider{
+               @apply text-[12px]  relative grid h-full w-full md:max-w-[360px]
+
 }

@@ -1,0 +1,60 @@
+body {
+  height: 100vh;
+}
+
+#GlasLeft {
+  position: fixed;
+  background: rgb(220, 220, 230);
+  background-color: rgb(220, 220, 230);
+  top: 50mm;
+  left: 20mm;
+  width: 26mm;
+  height: 100mm;
+  transform: skewY(20deg);
+  display: block;
+  background-color: #D2E9E0;
+  opacity: 0.5;
+  border-style: solid;
+  border-color: #98CEAE;
+  border-width: 2px;
+}
+
+#GlasRight {
+  /* Wand rechts */
+  position: fixed;
+  background: rgb(220, 220, 230);
+  top: 18mm;
+  left: 125mm;
+  width: 24mm;
+  height: 100mm;
+  transform: skewY(-20deg);
+  display: block;
+  background-color: #D2E9E0;
+  opacity: 0.5;
+  border-style: solid;
+  border-color: #98CEAE;
+  border-width: 2px;
+  /* transform: matrix(3, 0, 0, 1.10, 0, 0); */
+}
+
+#GlasFront {
+  position: fixed;
+  transform-origin: 100% center;
+  background: rgb(220, 220, 230);
+  background-color: rgb(220, 220, 230);
+  top: 19.9mm;
+  left: 110mm;
+  width: 15mm;
+  height: 100mm;
+  transform: skewY(19deg);
+  display: block;
+  background-color: #D2E9E0;
+  opacity: 0.5;
+  border-style: solid;
+  border-color: #98CEAE;
+  border-width: 2px;
+}
+
+.bottom-26 {
+  bottom: 26px;
+}
