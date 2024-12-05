@@ -13,6 +13,7 @@ module.exports = {
         customgray: "#929292",
         light: "#444",
         info: "#2DB5C2",
+        infoLowOpacity: "rgb(45 181 194 / 30%)",
         info2: "rgb(28, 139, 150)",
         info3: "rgb(215, 241, 243)",
         footer: "#F2F2F2",
@@ -50,12 +51,12 @@ module.exports = {
         primary10: "#EAF8F9",
         sliedContImageColor: "rgba(111, 115, 119, .07)",
         sliedContImageBorderColor: "#1dac77",
-        sliedContImagePercentColor: "#f16422",
-        sliedContImageHeartColor: "#00bf6f",
-        modalBgColor:"#0000006b",
-        theadDark:"#212529",
-        productColorsPices:"#f16422"
-
+        sliedContImagePercentColor: "#2DB5C2",
+        sliedContImageHeartColor: "#2DB5C2",
+        modalBgColor: "#0000006b",
+        theadDark: "#212529",
+        productColorsPices: "#2DB5C2",
+        borderColor: "rgb(222, 222, 222)",
       },
       borderWidth: {
         1: "1.5px",
