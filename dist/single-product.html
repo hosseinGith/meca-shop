@@ -13941,12 +13941,10 @@
     </header>
 
     <!-- main -->
-    <main
-      class="xl:max-w-[1400px] sm:max-w-7xl mx-auto px-4 mt-10 pb-[88px] lg:pb-0"
-    >
+    <main class="max-w-[1336px] mx-auto px-4 mt-10 pb-[88px] lg:pb-0">
       <!-- breadcrumb -->
       <section>
-        <div class="xl:max-w-[1400px] sm:max-w-7xl mx-auto px-4 mt-24 lg:mt-0">
+        <div class="mx-auto px-4 mt-24 lg:mt-0">
           <div class="flex items-center gap-2 lg:mr-10">
             <a
               class="cursor-pointer text-xs text-gray-600 transition-all hover:text-info"
@@ -13991,14 +13989,37 @@
 
       <!-- product image && details -->
       <section class="mt-9">
-        <div class="grid grid-cols-12 gap-y-8 lg:gap-y-0 lg:gap-x-8">
-          <div class="lg:col-span-4 col-span-12">
+        <div
+          class="grid grid-cols-1 lg:grid-cols-[45%_55%] gap-y-8 lg:gap-y-0 lg:gap-x-8"
+        >
+          <div class="">
             <div class="flex items-center justify-center h-full">
               <!-- Swiper -->
-              <div class="w-full grid grid-cols-[20%_80%] items-center">
+              <div class="w-full grid grid-cols-[15%_85%] items-center h-full">
                 <div class="w-full">
+                  <button
+                    id="prev-product-color"
+                    class="w-full flex justify-center"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="max-w-[40px] w-full"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="m4.5 15.75 7.5-7.5 7.5 7.5"
+                      />
+                    </svg>
+                  </button>
                   <div class="swiper galleryCategory max-h-[350px]">
-                    <div class="swiper-wrapper">
+                    <div
+                      class="swiper-wrapper flex flex-col items-center justify-center"
+                    >
                       <div
                         categoryId="1"
                         href="img/img.png"
@@ -14041,6 +14062,25 @@
                       </div>
                     </div>
                   </div>
+                  <button
+                    id="next-product-color"
+                    class="w-full flex justify-center"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="max-w-[40px] w-full"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="m19.5 8.25-7.5 7.5-7.5-7.5"
+                      />
+                    </svg>
+                  </button>
                 </div>
                 <div class="swiper gallery w-full">
                   <div class="swiper-wrapper">
@@ -14050,7 +14090,7 @@
                       href="img/img.png"
                       class="swiper-slide cursor-crosshair zoom-container"
                     >
-                      <img src="img/img.png" class="img-fluid w-3/4 mx-auto" />
+                      <img src="img/img.png" class="w-full h-full object-contain" />
                       <div class="zoom-lens" style="display: none"></div>
                     </a>
                     <a
@@ -14059,7 +14099,7 @@
                       href="img/img.png"
                       class="swiper-slide cursor-crosshair zoom-container"
                     >
-                      <img src="img/img.png" class="img-fluid w-3/4 mx-auto" />
+                      <img src="img/img.png" class="w-full h-full object-contain" />
                       <div class="zoom-lens" style="display: none"></div>
                     </a>
                     <a
@@ -14068,7 +14108,7 @@
                       href="img/img.png"
                       class="swiper-slide cursor-crosshair zoom-container"
                     >
-                      <img src="img/img.png" class="img-fluid w-3/4 mx-auto" />
+                      <img src="img/img.png" class="w-full h-full object-contain" />
                       <div class="zoom-lens" style="display: none"></div>
                     </a>
                     <a
@@ -14077,7 +14117,7 @@
                       href="img/img.png"
                       class="swiper-slide cursor-crosshair zoom-container"
                     >
-                      <img src="img/img.png" class="img-fluid w-3/4 mx-auto" />
+                      <img src="img/img.png" class="w-full h-full object-contain" />
                       <div class="zoom-lens" style="display: none"></div>
                     </a>
                   </div>
@@ -14085,7 +14125,7 @@
               </div>
             </div>
           </div>
-          <div class="lg:col-span-8 col-span-12">
+          <div class="">
             <div
               class="h-10 text-sm absolute right-0 left-0 lg:hidden mb-5 bg-pink text-danger flex items-center justify-center font-bold"
             >
@@ -14274,13 +14314,13 @@
                         xmlns="http://www.w3.org/2000/svg"
                         width="19.212"
                         height="19.132"
+                        stroke="#2DB5C2"
                         viewBox="0 0 19.212 19.132"
                       >
                         <defs>
                           <style>
                             .prefix__cls-1 {
                               fill: none;
-                              stroke: #1dca77;
                               stroke-width: 1.4px;
                               stroke-linecap: round;
                               stroke-linejoin: round;
@@ -14330,7 +14370,6 @@
                           <path
                             id="prefix__Path_639"
                             fill="none"
-                            stroke="#1dca77"
                             stroke-miterlimit="10"
                             stroke-width="1.4px"
                             d="M-3589.876 2720.93a2.153 2.153 0 0 1-.256-2.722c.132-.226 6.188-6.311 6.708-6.827s3.8-3.8 4.167-4.05a2.148 2.148 0 0 1 2.73.253 21.616 21.616 0 0 1 3.053 3.04 2.218 2.218 0 0 1 .256 2.732c-.115.2-3.3 3.413-4.056 4.176-.806.811-6.73 6.664-6.834 6.716a2.227 2.227 0 0 1-2.73-.26 21.655 21.655 0 0 1-3.038-3.058z"
@@ -21393,7 +21432,7 @@
       const closeSizeDropDown = document.querySelector("#closeSizeDropDown");
       const sizeDropDownCont = document.querySelector("#sizeDropDownCont");
       const openSizeDropDown = document.querySelector("#openSizeDropDown");
-
+      let galleryCategorySlider;
       closeSizeDropDown.addEventListener("click", () => {
         sizeDropDownCont.children[0].classList.add("hideDropDownAnimation");
         sizeDropDownCont.children[0].classList.remove("showDropDownAnimation");
@@ -21441,20 +21480,19 @@
           },
         });
 
-        let galleryCategorySlider = new Swiper(".galleryCategory", {
+        galleryCategorySlider = new Swiper(".galleryCategory", {
           direction: "vertical",
           spaceBetween: 14,
           slidesPerView: "auto",
-          breakpoints: {
-            0: {
-              slidesPerView: 3,
-            },
-            600: {
               slidesPerView: "auto",
-            },
-          },
         });
-        gallerySlide.on("transitionEnd", function (e) {
+            $("#next-product-color").click(() => {
+        gallerySlide.slideNext();
+      });
+      $("#prev-product-color").click(() => {
+        gallerySlide.slidePrev();
+      });
+        gallerySlide.on("transitionStart", function (e) {
           galleryCategory_slide.forEach((item) => {
             let indexSLide = Number(item.getAttribute("categoryid"));
             if (
@@ -21525,6 +21563,7 @@
           ).json();
         } catch (e) {}
       });
+  
     </script>
   </body>
 </html>

@@ -1442,10 +1442,6 @@ video {
   width: 0.75rem;
 }
 
-.w-3\/4 {
-  width: 75%;
-}
-
 .w-4 {
   width: 1rem;
 }
@@ -1563,12 +1559,20 @@ video {
   max-width: 936px;
 }
 
+.max-w-\[1336px\] {
+  max-width: 1336px;
+}
+
 .max-w-\[300px\] {
   max-width: 300px;
 }
 
 .max-w-\[330px\] {
   max-width: 330px;
+}
+
+.max-w-\[40px\] {
+  max-width: 40px;
 }
 
 .max-w-\[900px\] {
@@ -1679,8 +1683,8 @@ video {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
-.grid-cols-\[20\%_80\%\] {
-  grid-template-columns: 20% 80%;
+.grid-cols-\[15\%_85\%\] {
+  grid-template-columns: 15% 85%;
 }
 
 .flex-row {
@@ -2247,6 +2251,10 @@ video {
 
 .fill-sliedContImageHeartColor {
   fill: #2DB5C2;
+}
+
+.stroke-sliedContImageHeartColor {
+  stroke: #2DB5C2;
 }
 
 .object-contain {
@@ -4400,6 +4408,10 @@ input[type="range"]:focus {
 
   .lg\:grid-cols-6 {
     grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-\[45\%_55\%\] {
+    grid-template-columns: 45% 55%;
   }
 
   .lg\:flex-row {
