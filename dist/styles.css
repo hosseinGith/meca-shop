@@ -1683,8 +1683,8 @@ video {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
-.grid-cols-\[15\%_85\%\] {
-  grid-template-columns: 15% 85%;
+.grid-cols-\[20\%_80\%\] {
+  grid-template-columns: 20% 80%;
 }
 
 .flex-row {
@@ -2251,10 +2251,6 @@ video {
 
 .fill-sliedContImageHeartColor {
   fill: #2DB5C2;
-}
-
-.stroke-sliedContImageHeartColor {
-  stroke: #2DB5C2;
 }
 
 .object-contain {
