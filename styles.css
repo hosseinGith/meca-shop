@@ -468,25 +468,48 @@ input[type="range"]:focus {
 .storySlider {
   @apply text-[12px] relative grid h-full w-full md:max-w-[360px];
 }
-.largPictursSlidesStyle{
-  @apply md:px-[0] px-4  overflow-hidden  w-full ;
+.largPictursSlidesStyle {
+  @apply md:px-[0] px-4  overflow-hidden  w-full;
 }
-.largPictursSlidesStyle img{
-  @apply md:rounded-none md:object-contain md:aspect-auto rounded-lg object-cover aspect-video md:h-auto h-[180px] w-full ;
+.largPictursSlidesStyle img {
+  @apply md:rounded-none md:object-contain md:aspect-auto rounded-lg object-cover aspect-video md:h-auto h-[180px] w-full;
 }
 .largeScreenSlidePagination {
   @apply flex items-center justify-center;
 }
-.largeScreenSlidePagination .swiper-pagination-bullet{
-  transition: all .3;
-  width: 4px ;
+.largeScreenSlidePagination .swiper-pagination-bullet {
+  transition: all 0.3;
+  width: 4px;
   height: 4px;
 }
-.largeScreenSlidePagination .swiper-pagination-bullet.swiper-pagination-bullet-active{
+.largeScreenSlidePagination
+  .swiper-pagination-bullet.swiper-pagination-bullet-active {
   padding: 0 10px;
   border-radius: 10px;
   background: #fff;
   width: 8px !important;
   height: 8px !important;
 }
- 
+
+.storySlideStyle {
+  @apply flex flex-col items-center justify-center text-center;
+}
+.storySlideStyle > div {
+  @apply relative rounded-full p-[2px] bg-[linear-gradient(315deg,#e03d96,#7d4c9e)];
+}
+.storySlideStyle > div > div {
+  @apply bg-white rounded-full p-[5px];
+}
+.storySlideStyle > div > div >div:first-child{
+  @apply  overflow-hidden rounded-full w-full h-[70px] flex items-center justify-center ;
+}
+.storySlideStyle > div > div > div img{
+  @apply w-full h-[full] object-cover;
+}
+.showStorySlideStyle{
+  @apply  md:block flex items-center justify-center
+
+} 
+.centerWidthFlex{
+  @apply justify-center items-center
+}
