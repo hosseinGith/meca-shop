@@ -1,3 +1,14 @@
 {
-    "php.problems.scope": "none"
+  "php.problems.scope": "none",
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+
+  "editor.parameterHints.enabled": false,
+  "files.watcherExclude": {
+    "**/.git/**": true,
+    "**/node_modules/**": true,
+    "**/dist/**": true
+  },
+  "editor.experimental.useGPU": false,
+  "editor.cursorBlinking": "solid",
+  "workbench.editor.enablePreview": true
 }

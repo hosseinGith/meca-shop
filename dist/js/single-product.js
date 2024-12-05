@@ -161,3 +161,5 @@ submitProduct.addEventListener("click", async (e) => {
     ).json();
   } catch (e) {}
 });
+
+
