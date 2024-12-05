@@ -354,7 +354,7 @@ async function storySwiperGetData() {
               ".storyShowSliderSlider"
             );
           },
-          slideChangeTransitionEnd: function () {
+          slideChangeTransitionStart: function () {
             console.log(234);
             let slideActive = document.querySelectorAll(
               ".storyShowSliderSlider"
