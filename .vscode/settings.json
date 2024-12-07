@@ -4,11 +4,14 @@
 
   "editor.parameterHints.enabled": false,
   "files.watcherExclude": {
-    "**/.git/**": true,
-    "**/node_modules/**": true,
-    "**/dist/**": true
+    "**/.git/**": false,
+    "**/node_modules/**": false,
+    "**/dist/**": false
   },
   "editor.experimental.useGPU": false,
   "editor.cursorBlinking": "solid",
-  "workbench.editor.enablePreview": true
+  "workbench.editor.enablePreview": false,
+  "files.exclude": {
+    "**/.git": false
+  }
 }

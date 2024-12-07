@@ -13,7 +13,7 @@
     <title>معرفی محصول</title>
   </head>
 
-  <body class="select-none">
+  <body class="select-nonem">
     <!-- overlay -->
     <div id="overlay" class="bg-black opacity-0 fixed inset-0 -z-50"></div>
 
@@ -9190,11 +9190,12 @@
           </div>
           <!-- socials -->
           <div class="flex items-center gap-6">
-            <a
+            <button
+            id="loginSubmit"
               class="lg:flex hidden items-center justify-center gap-3 loginIcon py-2 px-3 bg-info text-white font-bold rounded-lg text-xs cursor-pointer transition-all hover:bg-white hover:text-info border border-info"
             >
               ورود / ثبت نام
-            </a>
+            </button>
             <a class="lg:block hidden cursor-pointer group">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -9209,7 +9210,7 @@
                 />
               </svg>
             </a>
-            <div class="lg:block hidden cursor-pointer relative group">
+            <div id="clientAccount" class="lg:block hidden cursor-pointer relative group">
               <svg
                 width="24"
                 height="24"
@@ -9439,7 +9440,7 @@
                 </ul>
               </div>
             </div>
-            <div class="lg:block hidden cursor-pointer relative group">
+            <div id="caratHeader" class="lg:block hidden cursor-pointer relative group">
               <span
                 class="animate-bounce absolute -top-1 -right-3 bg-info text-white font-bold p-1 rounded-lg text-sm flex items-center justify-center w-5 h-5"
                 >2</span
@@ -13938,6 +13939,143 @@
           </div>
         </nav>
       </div>
+      <div class="window  px-2" id="loginWIndow">
+        <div
+          class="bg-white min p-4 rounded-lg text-sm text-center space-y-4 w-full max-w-[560px]"
+        >
+          <div class="flex justify-end">
+            <button onclick="closeLoginWindow()" id="closeLoginDropDown" class="w-[30px] h-[30px]">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 50 50"
+                class="w-full"
+              >
+                <path
+                  d="M 7.71875 6.28125 L 6.28125 7.71875 L 23.5625 25 L 6.28125 42.28125 L 7.71875 43.71875 L 25 26.4375 L 42.28125 43.71875 L 43.71875 42.28125 L 26.4375 25 L 43.71875 7.71875 L 42.28125 6.28125 L 25 23.5625 Z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div>
+            <div id="userNumberForm" class="space-y-4 mx-auto max-w-[500px] ">
+              <h1 class="text-2xl">ورود یا ثبت نام</h1>
+              <p class="text-center text-customgray font-bold">
+                لطفا برای ادامه شماره همراه خود را وارد نمایید.
+              </p>
+              <form class="centerWidthFlex flex flex-col gap-4">
+                <div
+                  class="w-full flex items-center border border-customgray rounded-lg overflow-hidden"
+                >
+                  <div class="pointer-events-none pr-4">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      class="stroke-customgray w-[25px] h-[25px]"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                      />
+                    </svg>
+                  </div>
+                  <input
+                    dir="ltr"
+                    maxlength="11"
+                    class="outline-none p-4 w-full"
+                    type="text"
+                    id="userNumber"
+                    name="number"
+                  />
+                </div>
+                <button class="p-4 w-full bg-info rounded-lg text-textWithInfo">ادامه</button>
+                <div class="flex gap-2 items-center">
+                  <input id="acceptServiceRuls" type="checkbox" />
+                <label for="acceptServiceRuls">
+                    شرایط و قوانین استفاده از سرویس های سایت بانی‌مد را می پذیرم
+                    .
+                </label>
+                </div>
+              </form>
+            </div>
+            <div
+              id="userNumberCodeForm"
+              class="space-y-4 mx-auto max-w-[500px] hidden"
+            >
+              <h1 class="text-2xl">ورود به مکا مود</h1>
+              <p class="text-center text-customgray font-bold">
+                کد تایید ۵ رقمی ارسال شده به شماره همراه زیر را وارد نمایید..
+              </p>
+              <div class="flex gap-9 items-center justify-center">
+                <span id="userNumberSpan">09000000000</span>
+                <button id="changeUserNumber" class="text-info flex items-center gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L6.832 19.82a4.5 4.5 0 0 1-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 0 1 1.13-1.897L16.863 4.487Zm0 0L19.5 7.125" />
+                  </svg>
+                  <span>ویرایش شماره</span>
+                </button>
+              </div>
+              <div class="centerWidthFlex flex flex-col gap-4">
+                <div
+                  dir="ltr"
+                  class="otpContainer mt-6 flex items-center justify-center gap-2"
+                >
+                  <input
+                    class="border-2 hover:border-info transition-all focus:border-info rounded-lg otpInput w-10 sm:w-14 h-10 sm:h-14 block text-center outline-none"
+                    type="text"
+                    maxlength="1"
+                  />
+                  <input
+                    class="border-2 hover:border-info transition-all focus:border-info rounded-lg otpInput w-10 sm:w-14 h-10 sm:h-14 block text-center outline-none"
+                    type="text"
+                    maxlength="1"
+                  />
+                  <input
+                    class="border-2 hover:border-info transition-all focus:border-info rounded-lg otpInput w-10 sm:w-14 h-10 sm:h-14 block text-center outline-none"
+                    type="text"
+                    maxlength="1"
+                  />
+                  <input
+                    class="border-2 hover:border-info transition-all focus:border-info rounded-lg otpInput w-10 sm:w-14 h-10 sm:h-14 block text-center outline-none"
+                    type="text"
+                    maxlength="1"
+                  />
+                  <input
+                    class="border-2 hover:border-info transition-all focus:border-info rounded-lg otpInput w-10 sm:w-14 h-10 sm:h-14 block text-center outline-none"
+                    type="text"
+                    maxlength="1"
+                  />
+                  <input
+                    class="border-2 hover:border-info transition-all focus:border-info rounded-lg otpInput w-10 sm:w-14 h-10 sm:h-14 block text-center outline-none"
+                    type="text"
+                    maxlength="1"
+                  />
+            <input type="hidden" id="otpHiddenInput" />
+          </div>
+                <form id="loginForm" action="">
+                  <input type="hidden" name="code" id="code" />
+                </form>
+                <div class="w-full space-y-4">
+                  <p class="flex w-full">دریافت مجدد کد از طریق:</p>
+                  <div class="flex gap-4 flex-col">
+                    <div class="flex w-full rounded-lg bg-gray200 p-4 justify-center items-center gap-5">
+                      <span class="animate-spin border-[#000] border-2  border-b-[transparent]  w-[20px] h-[20px] block rounded-full"></span>
+                      <span>1:00</span>
+                      <span>دقیقه</span>
+                    </div>  
+                  <div class="gap-4 hidden">
+                    <button class="w-full rounded-lg p-4 border border-info text-info">پیامک</button>
+                    <button class="w-full rounded-lg p-4 bg-info text-textWithInfo">تماس تلفنی</button>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
 
     <!-- main -->
@@ -14090,7 +14228,10 @@
                       href="img/img.png"
                       class="swiper-slide cursor-crosshair zoom-container"
                     >
-                      <img src="img/img.png" class="w-full h-full object-contain" />
+                      <img
+                        src="img/img.png"
+                        class="w-full h-full object-contain"
+                      />
                       <div class="zoom-lens" style="display: none"></div>
                     </a>
                     <a
@@ -14099,7 +14240,10 @@
                       href="img/img.png"
                       class="swiper-slide cursor-crosshair zoom-container"
                     >
-                      <img src="img/img.png" class="w-full h-full object-contain" />
+                      <img
+                        src="img/img.png"
+                        class="w-full h-full object-contain"
+                      />
                       <div class="zoom-lens" style="display: none"></div>
                     </a>
                     <a
@@ -14108,7 +14252,10 @@
                       href="img/img.png"
                       class="swiper-slide cursor-crosshair zoom-container"
                     >
-                      <img src="img/img.png" class="w-full h-full object-contain" />
+                      <img
+                        src="img/img.png"
+                        class="w-full h-full object-contain"
+                      />
                       <div class="zoom-lens" style="display: none"></div>
                     </a>
                     <a
@@ -14117,7 +14264,10 @@
                       href="img/img.png"
                       class="swiper-slide cursor-crosshair zoom-container"
                     >
-                      <img src="img/img.png" class="w-full h-full object-contain" />
+                      <img
+                        src="img/img.png"
+                        class="w-full h-full object-contain"
+                      />
                       <div class="zoom-lens" style="display: none"></div>
                     </a>
                   </div>

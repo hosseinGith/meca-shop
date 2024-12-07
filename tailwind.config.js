@@ -75,6 +75,7 @@ module.exports = {
         infoLowOpacity: "rgb(45 181 194 / 30%)",
         info2: "rgb(28, 139, 150)",
         info3: "rgb(215, 241, 243)",
+        textWithInfo:"#fff",
         footer: "#F2F2F2",
         pay: "#F9F9F9",
         firozei: "#0B5961",
