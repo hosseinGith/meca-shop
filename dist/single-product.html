@@ -9191,7 +9191,7 @@
           <!-- socials -->
           <div class="flex items-center gap-6">
             <button
-            id="loginSubmit"
+              id="loginSubmit"
               class="lg:flex hidden items-center justify-center gap-3 loginIcon py-2 px-3 bg-info text-white font-bold rounded-lg text-xs cursor-pointer transition-all hover:bg-white hover:text-info border border-info"
             >
               ورود / ثبت نام
@@ -9210,7 +9210,10 @@
                 />
               </svg>
             </a>
-            <div id="clientAccount" class="lg:block hidden cursor-pointer relative group">
+            <div
+              id="clientAccount"
+              class="lg:block hidden cursor-pointer relative group"
+            >
               <svg
                 width="24"
                 height="24"
@@ -9440,7 +9443,10 @@
                 </ul>
               </div>
             </div>
-            <div id="caratHeader" class="lg:block hidden cursor-pointer relative group">
+            <div
+              id="caratHeader"
+              class="lg:block hidden cursor-pointer relative group"
+            >
               <span
                 class="animate-bounce absolute -top-1 -right-3 bg-info text-white font-bold p-1 rounded-lg text-sm flex items-center justify-center w-5 h-5"
                 >2</span
@@ -13939,12 +13945,16 @@
           </div>
         </nav>
       </div>
-      <div class="window  px-2" id="loginWIndow">
+      <div class="window px-2" id="loginWIndow">
         <div
           class="bg-white min p-4 rounded-lg text-sm text-center space-y-4 w-full max-w-[560px]"
         >
           <div class="flex justify-end">
-            <button onclick="closeLoginWindow()" id="closeLoginDropDown" class="w-[30px] h-[30px]">
+            <button
+              onclick="closeLoginWindow()"
+              id="closeLoginDropDown"
+              class="w-[30px] h-[30px]"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 50 50"
@@ -13957,7 +13967,7 @@
             </button>
           </div>
           <div>
-            <div id="userNumberForm" class="space-y-4 mx-auto max-w-[500px] ">
+            <div id="userNumberForm" class="space-y-4 mx-auto max-w-[500px]">
               <h1 class="text-2xl">ورود یا ثبت نام</h1>
               <p class="text-center text-customgray font-bold">
                 لطفا برای ادامه شماره همراه خود را وارد نمایید.
@@ -13990,13 +14000,15 @@
                     name="number"
                   />
                 </div>
-                <button class="p-4 w-full bg-info rounded-lg text-textWithInfo">ادامه</button>
+                <button class="p-4 w-full bg-info rounded-lg text-textWithInfo">
+                  ادامه
+                </button>
                 <div class="flex gap-2 items-center">
                   <input id="acceptServiceRuls" type="checkbox" />
-                <label for="acceptServiceRuls">
+                  <label for="acceptServiceRuls">
                     شرایط و قوانین استفاده از سرویس های سایت بانی‌مد را می پذیرم
                     .
-                </label>
+                  </label>
                 </div>
               </form>
             </div>
@@ -14010,9 +14022,23 @@
               </p>
               <div class="flex gap-9 items-center justify-center">
                 <span id="userNumberSpan">09000000000</span>
-                <button id="changeUserNumber" class="text-info flex items-center gap-2">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L6.832 19.82a4.5 4.5 0 0 1-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 0 1 1.13-1.897L16.863 4.487Zm0 0L19.5 7.125" />
+                <button
+                  id="changeUserNumber"
+                  class="text-info flex items-center gap-2"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L6.832 19.82a4.5 4.5 0 0 1-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 0 1 1.13-1.897L16.863 4.487Zm0 0L19.5 7.125"
+                    />
                   </svg>
                   <span>ویرایش شماره</span>
                 </button>
@@ -14052,23 +14078,35 @@
                     type="text"
                     maxlength="1"
                   />
-            <input type="hidden" id="otpHiddenInput" />
-          </div>
+                  <input type="hidden" id="otpHiddenInput" />
+                </div>
                 <form id="loginForm" action="">
                   <input type="hidden" name="code" id="code" />
                 </form>
                 <div class="w-full space-y-4">
                   <p class="flex w-full">دریافت مجدد کد از طریق:</p>
                   <div class="flex gap-4 flex-col">
-                    <div class="flex w-full rounded-lg bg-gray200 p-4 justify-center items-center gap-5">
-                      <span class="animate-spin border-[#000] border-2  border-b-[transparent]  w-[20px] h-[20px] block rounded-full"></span>
+                    <div
+                      class="flex w-full rounded-lg bg-gray200 p-4 justify-center items-center gap-5"
+                    >
+                      <span
+                        class="animate-spin border-[#000] border-2 border-b-[transparent] w-[20px] h-[20px] block rounded-full"
+                      ></span>
                       <span>1:00</span>
                       <span>دقیقه</span>
-                    </div>  
-                  <div class="gap-4 hidden">
-                    <button class="w-full rounded-lg p-4 border border-info text-info">پیامک</button>
-                    <button class="w-full rounded-lg p-4 bg-info text-textWithInfo">تماس تلفنی</button>
-                  </div>
+                    </div>
+                    <div class="gap-4 hidden">
+                      <button
+                        class="w-full rounded-lg p-4 border border-info text-info"
+                      >
+                        پیامک
+                      </button>
+                      <button
+                        class="w-full rounded-lg p-4 bg-info text-textWithInfo"
+                      >
+                        تماس تلفنی
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -14079,7 +14117,7 @@
     </header>
 
     <!-- main -->
-    <main class="max-w-[1336px] mx-auto px-4 mt-10 pb-[88px] lg:pb-0">
+    <main class="max-w-[1632px] mx-auto px-4 mt-10 pb-[88px] lg:pb-0">
       <!-- breadcrumb -->
       <section>
         <div class="mx-auto px-4 mt-24 lg:mt-0">
@@ -14127,10 +14165,8 @@
 
       <!-- product image && details -->
       <section class="mt-9">
-        <div
-          class="grid grid-cols-1 lg:grid-cols-[45%_55%] gap-y-8 lg:gap-y-0 lg:gap-x-8"
-        >
-          <div class="">
+        <div class="flex lg:flex-row flex-col gap-y-8 lg:gap-y-0 lg:gap-x-8">
+          <div class="lg:basis-[45%]">
             <div class="flex items-center justify-center h-full">
               <!-- Swiper -->
               <div class="w-full grid grid-cols-[20%_80%] items-center h-full">
@@ -14275,7 +14311,7 @@
               </div>
             </div>
           </div>
-          <div class="">
+          <div class="lg:basis-[55%]">
             <div
               class="h-10 text-sm absolute right-0 left-0 lg:hidden mb-5 bg-pink text-danger flex items-center justify-center font-bold"
             >
@@ -14403,43 +14439,121 @@
                     <span id="colorText" class="font-bold">مشکی</span>
                   </p>
                   <div class="swiper productColorsCont">
+                    <div class="h-[44px] flex items-center justify-end">
+                      <div
+                        style="
+                          position: static;
+                          rotate: 180deg;
+                          font-size: 16px;
+                        "
+                        class="my-auto swiper-button-prev"
+                      ></div>
+                      <div
+                        class="swiper-pagination flex"
+                        style="position: static; width: max-content"
+                      ></div>
+                      <div
+                        style="
+                          position: static;
+                          rotate: 180deg;
+                          font-size: 16px;
+                        "
+                        class="my-auto swiper-button-next"
+                      ></div>
+                    </div>
                     <ul class="productColors flex swiper-wrapper">
                       <li
-                        class="swiper-slide w-[94px] rounded-md group cursor-pointer border-2 p-2 border-sliedContImageHeartColor"
+                        class="swiper-slide w-[94px] border-2 p-2 group rounded-md cursor-pointer"
                       >
-                        <div
-                          class="filter group-hover:brightness-[.9] transition-all"
-                        >
-                          <img
-                            class="w-[67px] h-[80px]"
-                            src="https://www.banimode.com/2309542-thickbox_default/310492.jpg"
-                          />
+                        <div class="relative">
+                          <div
+                            class="filter hover:brightness-[.9] transition-all"
+                          >
+                            <img
+                              class="w-[67px] h-[80px]"
+                              src="https://www.banimode.com/2309542-thickbox_default/310492.jpg"
+                            />
+                          </div>
+                          <span
+                            class="hidden absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] text-white text-sm"
+                            >ناموجود</span
+                          >
                         </div>
                         <p class="w-full text-center text-sm">صورتی</p>
                       </li>
                       <li
                         class="swiper-slide w-[94px] border-2 p-2 group rounded-md cursor-pointer"
                       >
-                        <div
-                          class="filter group-hover:brightness-[.9] transition-all"
-                        >
-                          <img
-                            class="w-[67px] h-[80px]"
-                            src="https://www.banimode.com/2309542-thickbox_default/310492.jpg"
-                          />
+                        <div class="relative">
+                          <div
+                            class="filter hover:brightness-[.9] transition-all"
+                          >
+                            <img
+                              class="w-[67px] h-[80px]"
+                              src="https://www.banimode.com/2309542-thickbox_default/310492.jpg"
+                            />
+                          </div>
+                          <span
+                            class="hidden absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] text-white text-sm"
+                            >ناموجود</span
+                          >
                         </div>
                         <p class="w-full text-center text-sm">صورتی</p>
                       </li>
                       <li
                         class="swiper-slide w-[94px] border-2 p-2 group rounded-md cursor-pointer"
                       >
-                        <div
-                          class="filter group-hover:brightness-[.9] transition-all"
-                        >
-                          <img
-                            class="w-[67px] h-[80px]"
-                            src="https://www.banimode.com/2309542-thickbox_default/310492.jpg"
-                          />
+                        <div class="relative">
+                          <div
+                            class="filter hover:brightness-[.9] transition-all"
+                          >
+                            <img
+                              class="w-[67px] h-[80px]"
+                              src="https://www.banimode.com/2309542-thickbox_default/310492.jpg"
+                            />
+                          </div>
+                          <span
+                            class="hidden absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] text-white text-sm"
+                            >ناموجود</span
+                          >
+                        </div>
+                        <p class="w-full text-center text-sm">صورتی</p>
+                      </li>
+                      <li
+                        class="swiper-slide w-[94px] border-2 p-2 group rounded-md cursor-pointer"
+                      >
+                        <div class="relative">
+                          <div
+                            class="filter hover:brightness-[.9] transition-all"
+                          >
+                            <img
+                              class="w-[67px] h-[80px]"
+                              src="https://www.banimode.com/2309542-thickbox_default/310492.jpg"
+                            />
+                          </div>
+                          <span
+                            class="hidden absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] text-white text-sm"
+                            >ناموجود</span
+                          >
+                        </div>
+                        <p class="w-full text-center text-sm">صورتی</p>
+                      </li>
+                      <li
+                        class="swiper-slide w-[94px] border-2 p-2 group rounded-md cursor-pointer"
+                      >
+                        <div class="relative">
+                          <div
+                            class="filter brightness-[.3] transition-all"
+                          >
+                            <img
+                              class="w-[67px] h-[80px]"
+                              src="https://www.banimode.com/2309542-thickbox_default/310492.jpg"
+                            />
+                          </div>
+                          <span
+                            class=" absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] text-white text-sm"
+                            >ناموجود</span
+                          >
                         </div>
                         <p class="w-full text-center text-sm">صورتی</p>
                       </li>
@@ -14531,42 +14645,14 @@
                       <span> سایز من چنده؟ </span>
                     </button>
                   </div>
-                  <p class="text-gray-800 text-sm mt-6 hidden lg:block">
-                    ویژگی‌ها
-                  </p>
-                  <ul class="mt-4 list-disc pr-4 pb-6 border-b hidden lg:block">
-                    <li class="text-xs text-gray-700 mb-2">
-                      فناوری صفحه‌نمایش:
-                      <span class="font-bold text-gray-800"
-                        >Super Retina XDR OLED</span
-                      >
-                    </li>
-                    <li class="text-xs text-gray-700 mb-2">
-                      اندازه:
-                      <span class="font-bold text-gray-800">6.1</span>
-                    </li>
-                    <li class="text-xs text-gray-700 mb-2">
-                      رزولوشن عکس:
-                      <span class="font-bold text-gray-800">12 مگاپیکسل</span>
-                    </li>
-                    <li class="text-xs text-gray-700 mb-2">
-                      نسخه سیستم عامل:
-                      <span class="font-bold text-gray-800">iOS 15</span>
-                    </li>
-                    <li class="text-xs text-gray-700">
-                      توضیحات سیم کارت:
-                      <span class="font-bold text-gray-800"
-                        >سایز نانو (8.8 × 12.3 میلی‌متر)</span
-                      >
-                    </li>
-                  </ul>
-                  <p class="text-gray42 mt-6 text-xs font-bold hidden lg:block">
+
+                  <!-- <p class="text-gray42 mt-6 text-xs font-bold hidden lg:block">
                     <span class="text-danger">توجه:</span> امکان برگشت کالا در
                     گروه موبایل با دلیل "انصراف از خرید" تنها در صورتی مورد قبول
                     است که پلمب کالا باز نشده باشد. تمام گوشی‌های کوک موبایل
                     ضمانت رجیستری دارند. در صورت وجود مشکل رجیستری، می‌توانید
                     بعد از مهلت قانونی ۳۰ روزه، گوشی خریداری‌شده را مرجوع کنید.
-                  </p>
+                  </p> -->
                 </div>
               </div>
               <div class="lg:col-span-5 col-span-12 hidden lg:block">

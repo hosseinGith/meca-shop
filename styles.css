@@ -513,3 +513,7 @@ input[type="range"]:focus {
 .centerWidthFlex{
   @apply justify-center items-center
 }
+.swiper-button-prev::after,
+.swiper-button-next::after{
+  font-size:inherit;
+}

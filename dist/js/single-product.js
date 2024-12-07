@@ -82,6 +82,15 @@ function dinamicData() {
         slidesPerView: "auto",
       },
     },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable:true
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+      clickable:true
+    },
   });
 
   galleryCategorySlider = new Swiper(".galleryCategory", {
@@ -149,17 +158,7 @@ submitProduct.addEventListener("click", async (e) => {
     a: productColor.value,
     b: productSize.value,
   };
-  try {
-    let res = await (
-      await fetch("url", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      })
-    ).json();
-  } catch (e) {}
+
 });
 
 
