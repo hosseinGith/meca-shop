@@ -2583,6 +2583,10 @@ video {
   padding-top: 2rem;
 }
 
+.pt-\[70px\] {
+  padding-top: 70px;
+}
+
 .text-left {
   text-align: left;
 }
@@ -4209,6 +4213,30 @@ input[type="range"]:focus {
 
   .md\:pt-0 {
     padding-top: 0px;
+  }
+
+  .md\:pt-8 {
+    padding-top: 2rem;
+  }
+
+  .md\:pt-10 {
+    padding-top: 2.5rem;
+  }
+
+  .md\:pt-\[150px\] {
+    padding-top: 150px;
+  }
+
+  .md\:pt-\[140px\] {
+    padding-top: 140px;
+  }
+
+  .md\:pt-\[120px\] {
+    padding-top: 120px;
+  }
+
+  .md\:pt-\[70px\] {
+    padding-top: 70px;
   }
 
   .md\:text-base {
