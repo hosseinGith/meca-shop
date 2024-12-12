@@ -162,3 +162,7 @@ submitProduct.addEventListener("click", async (e) => {
 });
 
 
+if(innerWidth<1024){
+  $("#transfareChildren")[0].insertBefore($("#transfareChildren")[0].children[1],$("#transfareChildren")[0].children[0])
+
+}
