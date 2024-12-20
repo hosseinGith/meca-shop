@@ -22,6 +22,7 @@ module.exports = {
     "items-center",
     "w-[40px]",
     "h-[40px]",
+    "border-info",
     "rounded-full",
     "object-cover",
     "aspcet-video",
