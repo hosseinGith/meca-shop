@@ -1573,6 +1573,10 @@ video {
   width: max-content;
 }
 
+.w-\[50px\] {
+  width: 50px;
+}
+
 .min-w-\[100px\] {
   min-width: 100px;
 }
@@ -4049,6 +4053,10 @@ input[type="range"]:focus {
     width: 350px;
   }
 
+  .sm\:w-\[100px\] {
+    width: 100px;
+  }
+
   .sm\:max-w-7xl {
     max-width: 80rem;
   }
@@ -4105,6 +4113,10 @@ input[type="range"]:focus {
   .sm\:border-gray-200 {
     --tw-border-opacity: 1;
     border-color: rgb(229 231 235 / var(--tw-border-opacity));
+  }
+
+  .sm\:p-8 {
+    padding: 2rem;
   }
 
   .sm\:px-4 {
