@@ -2156,6 +2156,11 @@ video {
   background-color: #f1642212;
 }
 
+.bg-\[\#f37a23\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 122 35 / var(--tw-bg-opacity));
+}
+
 .bg-\[\#f9f9f9\] {
   --tw-bg-opacity: 1;
   background-color: rgb(249 249 249 / var(--tw-bg-opacity));
@@ -2521,6 +2526,11 @@ video {
   padding-bottom: 2.25rem;
 }
 
+.px-1 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
 .pb-0 {
   padding-bottom: 0px;
 }
@@ -2766,6 +2776,11 @@ video {
 .text-\[\#f17439\] {
   --tw-text-opacity: 1;
   color: rgb(241 116 57 / var(--tw-text-opacity));
+}
+
+.text-\[\#f37a23\] {
+  --tw-text-opacity: 1;
+  color: rgb(243 122 35 / var(--tw-text-opacity));
 }
 
 .text-basegreen {
