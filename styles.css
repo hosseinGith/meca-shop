@@ -517,3 +517,6 @@ input[type="range"]:focus {
 .swiper-button-next::after{
   font-size:inherit;
 }
+.setFlexGrow >*{
+  flex-grow: 3;
+}
