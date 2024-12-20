@@ -1637,6 +1637,14 @@ video {
   max-width: 900px;
 }
 
+.max-w-\[45px\] {
+  max-width: 45px;
+}
+
+.max-w-\[100px\] {
+  max-width: 100px;
+}
+
 .flex-shrink-0 {
   flex-shrink: 0;
 }
@@ -4055,6 +4063,10 @@ input[type="range"]:focus {
 
   .sm\:w-\[100px\] {
     width: 100px;
+  }
+
+  .sm\:w-\[130px\] {
+    width: 130px;
   }
 
   .sm\:max-w-7xl {
