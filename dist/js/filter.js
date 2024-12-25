@@ -26,18 +26,7 @@ openCart.addEventListener('click',function () {
 closeCartModal.addEventListener('click',function () {
     cartModal.classList.remove('active');
 });
-addInput.forEach((item)=>{
-    item.addEventListener('click',function () {
-        item.nextElementSibling.value++
-    });
-});
-lessInput.forEach((item)=>{
-    item.addEventListener('click',function () {
-        if(item.previousElementSibling.value > 1){
-            item.previousElementSibling.value--
-        }
-    });
-});
+
 openCategory.addEventListener('click',function () {
     categoryModal.classList.toggle('active');
     cartModal.classList.remove('active');
