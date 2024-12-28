@@ -520,3 +520,6 @@ input[type="range"]:focus {
 .setFlexGrow >*{
   flex-grow: 3;
 }
+.button{
+  @apply  px-2 h-10 w-full cursor-pointer rounded-lg transition-all hover:bg-info2 bg-info text-white  font-bold mt-3 flex items-center justify-center
+}

@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./dist/*.html", "./dist/*.js"],
+  content: ["./dist/*.html"],
   safelist: [
     "storySlider",
     "mx-auto",
