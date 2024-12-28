@@ -1429,6 +1429,10 @@ video {
   max-height: 70px;
 }
 
+.max-h-\[90vh\] {
+  max-height: 90vh;
+}
+
 .min-h-\[150px\] {
   min-height: 150px;
 }
@@ -4125,6 +4129,10 @@ input[type="range"]:focus {
 
   .sm\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .sm\:flex-row {
+    flex-direction: row;
   }
 
   .sm\:gap-20 {
