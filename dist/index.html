@@ -17074,7 +17074,7 @@
         position: fixed;
         top: 0;
         left: 0;
-        z-index: 19;
+        z-index: 9999;
       "
       id="snowCanvas"
     ></canvas>
@@ -17102,7 +17102,7 @@
           this.y += this.speed;
           if (this.y > canvas.height) {
             this.y = -value;
-            this.x = Math.random() * canvas.width;
+          this.x = Math.random() * canvas.width;
           }
           if (this.x > canvas.width || this.x < 0) {
             this.x = Math.random() * canvas.width;
@@ -17112,8 +17112,9 @@
 
       class Snowflake extends Element {
         constructor(x, y, radius, speed) {
-          super(x, y, speed);
+          super(x, y, );
           this.radius = radius;
+          this.speed = speed;
         }
 
         draw() {
@@ -17142,12 +17143,13 @@
         }
 
         draw() {
-            ctx.drawImage(this.img, this.x, this.y, this.w, this.h);
+          ctx.drawImage(this.img, this.x, this.y, this.w, this.h);
         }
       }
 
       // Initialize snowflakes
       function initSnowflakes(count, img = false) {
+        console.log(img)
         if (img) {
           for (let i = 0; i < count; i++) {
             const x = Math.random() * canvas.width;
@@ -17166,7 +17168,6 @@
             let zarb = (i / count) * Math.random() * (Math.random() * 40);
             const radius = Math.random() * zarb + 1;
             const speed = Math.random() * 2 + 0.5;
-
             element.push(new Snowflake(x, y, radius, speed));
           }
         }
@@ -17176,7 +17177,7 @@
       function animate() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         element.forEach((el) => {
-          el.update(el.w);
+          el.update(el.w ? el.w : el.radius);
           el.draw();
         });
         requestAnimationFrame(animate);
@@ -17184,18 +17185,25 @@
 
       // Handle window resize
       // Snow weight
-      imageEfect.onload = () => {
-        console.log(235)
+      function runEfect() {
+        let intSetting=[canvas.width < 600 ? 25 : 5,imageEfect.src?imageEfect:false]
         window.addEventListener("resize", () => {
           canvas.width = window.innerWidth;
           canvas.height = window.innerHeight;
           element = [];
-          initSnowflakes(canvas.width < 600 ? 25 : 50, imageEfect); // Reinitialize element
+          initSnowflakes(intSetting[0],intSetting[1]); // Reinitialize element
         });
-        initSnowflakes(canvas.width < 600 ? 25 : 50, imageEfect);
+        initSnowflakes(intSetting[0],intSetting[1]);
         // Start animation
         animate();
-      };
+      }
+      if (imageEfect.src) {
+        imageEfect.onload = () => {
+          runEfect();
+        };
+      } else {
+        runEfect();
+      }
     </script>
   </body>
 </html>
