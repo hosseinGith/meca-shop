@@ -17094,6 +17094,10 @@
           this.y = y;
           this.radius = radius;
           this.speed = speed;
+          // window.addEventListener('mousemove',(e)=>{
+          //   if(e.clientX>this.x)this.x-=e.clientX/canvas.width
+          //   else this.x+=e.clientX/canvas.width
+          // })
         }
 
         update() {
@@ -17101,6 +17105,9 @@
           if (this.y > canvas.height) {
             this.y = -this.radius;
             this.x = Math.random() * canvas.width;
+          }
+          if(this.x>canvas.width||this.x<0){
+            this.x=Math.random() * canvas.width;
           }
         }
 
@@ -17132,6 +17139,7 @@
           let zarb=i/ count*Math.random()*(Math.random()*40)
           const radius = Math.random() *zarb + 1;
           const speed = Math.random() * 2 + 0.5;
+         
           snowflakes.push(new Snowflake(x, y, radius, speed));
         }
       }
@@ -17140,6 +17148,7 @@
       function animate() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         snowflakes.forEach((snowflake) => {
+         
           snowflake.update();
           snowflake.draw();
         });
@@ -17154,7 +17163,7 @@
         initSnowflakes(200); // Reinitialize snowflakes
       });
       // Snow weight
-      initSnowflakes(200);
+      initSnowflakes(canvas.width<600?25:50);
       // Start animation
       animate();
     </script>
