@@ -17059,7 +17059,6 @@
       </div>
     </footer>
 
-  
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
@@ -17070,9 +17069,15 @@
     <script src="js/home.js"></script>
     <!-- Snow settings -->
     <canvas
-    style="pointer-events:none; position: fixed; top: 0; left: 0; z-index: 10000000"
-    id="snowCanvas"
-  ></canvas>
+      style="
+        pointer-events: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10000000;
+      "
+      id="snowCanvas"
+    ></canvas>
     <script>
       const canvas = document.getElementById("snowCanvas");
       const ctx = canvas.getContext("2d");
@@ -17102,7 +17107,18 @@
         draw() {
           ctx.beginPath();
           ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-          ctx.fillStyle = "#bbb";
+          const gradient = ctx.createRadialGradient(
+            this.x,
+            this.y,
+            0,
+            this.x,
+            this.y,
+            this.radius
+        );
+        gradient.addColorStop(0, "#ccc"); // Center is fully opaque
+        gradient.addColorStop(1, "rgba(255, 255, 255, 0)"); // Edges are transparent
+
+          ctx.fillStyle = gradient;
           ctx.fill();
           ctx.closePath();
         }
@@ -17113,7 +17129,8 @@
         for (let i = 0; i < count; i++) {
           const x = Math.random() * canvas.width;
           const y = Math.random() * canvas.height;
-          const radius = Math.random() * 3 + 1;
+          let zarb=i/ count*Math.random()*(Math.random()*40)
+          const radius = Math.random() *zarb + 1;
           const speed = Math.random() * 2 + 0.5;
           snowflakes.push(new Snowflake(x, y, radius, speed));
         }
