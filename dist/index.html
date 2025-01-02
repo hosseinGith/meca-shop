@@ -17085,30 +17085,35 @@
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
 
-      let snowflakes = [];
-
+      let element = [];
+      const imageEfect = new Image();
+      imageEfect.src = "svg/heart.svg";
       // Snowflake class
-      class Snowflake {
-        constructor(x, y, radius, speed) {
+      class Element {
+        constructor(x, y, w, h, speed) {
           this.x = x;
           this.y = y;
-          this.radius = radius;
+          this.w = w;
+          this.h = h;
           this.speed = speed;
-          // window.addEventListener('mousemove',(e)=>{
-          //   if(e.clientX>this.x)this.x-=e.clientX/canvas.width
-          //   else this.x+=e.clientX/canvas.width
-          // })
         }
 
-        update() {
+        update(value) {
           this.y += this.speed;
           if (this.y > canvas.height) {
-            this.y = -this.radius;
+            this.y = -value;
             this.x = Math.random() * canvas.width;
           }
-          if(this.x>canvas.width||this.x<0){
-            this.x=Math.random() * canvas.width;
+          if (this.x > canvas.width || this.x < 0) {
+            this.x = Math.random() * canvas.width;
           }
+        }
+      }
+
+      class Snowflake extends Element {
+        constructor(x, y, radius, speed) {
+          super(x, y, speed);
+          this.radius = radius;
         }
 
         draw() {
@@ -17121,51 +17126,76 @@
             this.x,
             this.y,
             this.radius
-        );
-        gradient.addColorStop(0, "#ccc"); // Center is fully opaque
-        gradient.addColorStop(1, "rgba(255, 255, 255, 0)"); // Edges are transparent
+          );
+          gradient.addColorStop(0, "#ccc"); // Center is fully opaque
+          gradient.addColorStop(1, "rgba(255, 255, 255, 0)"); // Edges are transparent
 
           ctx.fillStyle = gradient;
           ctx.fill();
           ctx.closePath();
         }
       }
+      class ImageAnimate extends Element {
+        constructor(x, y, w, h, speed, img) {
+          super(x, y, w, h, speed);
+          this.img = img;
+        }
+
+        draw() {
+            ctx.drawImage(this.img, this.x, this.y, this.w, this.h);
+        }
+      }
 
       // Initialize snowflakes
-      function initSnowflakes(count) {
-        for (let i = 0; i < count; i++) {
-          const x = Math.random() * canvas.width;
-          const y = Math.random() * canvas.height;
-          let zarb=i/ count*Math.random()*(Math.random()*40)
-          const radius = Math.random() *zarb + 1;
-          const speed = Math.random() * 2 + 0.5;
-         
-          snowflakes.push(new Snowflake(x, y, radius, speed));
+      function initSnowflakes(count, img = false) {
+        if (img) {
+          for (let i = 0; i < count; i++) {
+            const x = Math.random() * canvas.width;
+            const y = Math.random() * canvas.height;
+            let zarb = (i / count) * Math.random() * (Math.random() * 80);
+            const w = Math.random() * zarb + 1;
+            const h = w;
+            const speed = Math.random() * 2 + 0.5;
+
+            element.push(new ImageAnimate(x, y, w, h, speed, img));
+          }
+        } else {
+          for (let i = 0; i < count; i++) {
+            const x = Math.random() * canvas.width;
+            const y = Math.random() * canvas.height;
+            let zarb = (i / count) * Math.random() * (Math.random() * 40);
+            const radius = Math.random() * zarb + 1;
+            const speed = Math.random() * 2 + 0.5;
+
+            element.push(new Snowflake(x, y, radius, speed));
+          }
         }
       }
 
       // Animate snowflakes
       function animate() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        snowflakes.forEach((snowflake) => {
-         
-          snowflake.update();
-          snowflake.draw();
+        element.forEach((el) => {
+          el.update(el.w);
+          el.draw();
         });
         requestAnimationFrame(animate);
       }
 
       // Handle window resize
-      window.addEventListener("resize", () => {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-        snowflakes = [];
-        initSnowflakes(200); // Reinitialize snowflakes
-      });
       // Snow weight
-      initSnowflakes(canvas.width<600?25:50);
-      // Start animation
-      animate();
+      imageEfect.onload = () => {
+        console.log(235)
+        window.addEventListener("resize", () => {
+          canvas.width = window.innerWidth;
+          canvas.height = window.innerHeight;
+          element = [];
+          initSnowflakes(canvas.width < 600 ? 25 : 50, imageEfect); // Reinitialize element
+        });
+        initSnowflakes(canvas.width < 600 ? 25 : 50, imageEfect);
+        // Start animation
+        animate();
+      };
     </script>
   </body>
 </html>
